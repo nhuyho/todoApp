@@ -1,0 +1,14 @@
+<div class="wr-input">
+    <form action="" [formGroup]="todoForm">
+        <input #formValue placeholder="What do you need to do today?" (keyup.enter)="addItem()" formControlName="taskName" />
+        <!-- <div *ngIf="f.taskName?.touched && f.taskName?.dirty">
+                <span *ngIf="f.taskName.errors.minLength" class="invalid-feedback">Vui long nhap tren 5 ki tu</span
+            > 
+        </div>
+      [ngClass]="{ 'is-invalid': f.taskName.errors }"-->
+
+        <button class="btn-add" (click)="addItem()">
+         <i class="fa fa-plus"></i>
+      </button>
+    </form>
+</div>

@@ -1,0 +1,7 @@
+<ng-container *ngIf="items && items.length > 0; else noItem">
+    <app-todo-item *ngFor="let item of items" [item]="item" (idItem)="onDeleted($event)" (itemModify)="onCheckDone($event)" (itemModified)="onChangePri($event)">
+    </app-todo-item>
+</ng-container>
+<ng-template #noItem>
+    <h4>No Task</h4>
+</ng-template>

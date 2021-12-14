@@ -1,0 +1,44 @@
+.wr-input {
+    padding: 0 0 1rem 0;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+input {
+    border: 0.1rem solid #ffa8b5;
+    border-radius: 0.5rem 0 0 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffa8b5;
+    width: 360px;
+}
+
+input:focus {
+    box-shadow: #ffc7d4 0px 4px 12px;
+    border: 0.1rem solid #ffa8b5;
+}
+
+input::placeholder {
+    color: #000;
+    font-style: italic;
+}
+
+.btn-add {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.8rem;
+    font-weight: 600;
+    border-radius: 0 0.5rem 0.5rem 0;
+    overflow: hidden;
+    transition: 0.05s ease-in-out;
+    text-align: center;
+    background-color: #ffa8b5;
+    border: none;
+    position: absolute;
+}
+
+button:hover {
+    box-shadow: #ffa8b5 0px 4px 12px;
+}

@@ -1,0 +1,41 @@
+<div
+   *ngIf="item"
+   [class]="item.status ? 'wr-item complete' : 'wr-item'"
+   appMarkColorPriority
+   [priority]="item.priority"
+>
+   <p (click)="checkDone()" class="item">
+      {{ item.name }} <i class="fa fa-check-circle"></i>
+      <em [style]="{ fontWeight: 600, textDecorationLine: 'line-through' }">{{
+         item.status ? 'completed' : ''
+      }}</em>
+   </p>
+   <small class="delete-item" (click)="onDeleted(item.id)"
+      ><i class="fa fa-trash"></i
+   ></small>
+
+   <div class="wr-priority">
+      <div
+         [class]="item.priority < 5 ? 'action' : 'action'"
+         (click)="changePri('up')"
+         [style.visibility]="item.status ? 'hidden' : 'visible'"
+      >
+         <small class="action"><i class="fa fa-angle-up"></i></small>
+      </div>
+
+      <div
+         [style]="{ backgroundColor: '#ffffff', color: '#474544' }"
+         class="item-priority"
+      >
+         <small>{{ item.priority }}</small>
+      </div>
+
+      <div
+         [class]="item.priority > 1 ? 'action ' : 'action'"
+         (click)="changePri('down')"
+         [style.visibility]="item.status ? 'hidden' : 'visible'"
+      >
+         <small class="action"><i class="fa fa-angle-down"></i></small>
+      </div>
+   </div>
+</div>
